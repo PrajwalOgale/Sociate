@@ -33,7 +33,7 @@ public class UserController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal Server Error.");
 		}
 	}
-	
+	//
 	@GetMapping("/check_email_availability")
 	public ResponseEntity<?> checkEmailAvailability(@RequestParam(value = "email") String email){
 		try {
