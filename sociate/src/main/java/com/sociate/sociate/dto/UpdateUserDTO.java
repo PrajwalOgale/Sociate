@@ -1,24 +1,20 @@
 package com.sociate.sociate.dto;
 
-import org.springframework.web.multipart.MultipartFile;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
-
 @ToString
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterUserDTO {
+public class UpdateUserDTO {
 
 	private String username;
-
+	
 	private String email;
 
 	private String password;
@@ -27,9 +23,9 @@ public class RegisterUserDTO {
 
 	private String lastName;
 
-	private MultipartFile coverPic;
-	private MultipartFile profilePic;
-	
+	private String coverPic;
+
+	private String profilePic;
 	private String city;
 	private String website;
 }
