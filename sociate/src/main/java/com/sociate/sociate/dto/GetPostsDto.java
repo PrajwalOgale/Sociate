@@ -1,6 +1,10 @@
 package com.sociate.sociate.dto;
 
+import java.time.LocalDate;
+
 import org.springframework.web.multipart.MultipartFile;
+
+import com.sociate.sociate.models.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,21 +17,12 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdateUserDTO {
+public class GetPostsDto {
 
+	private LocalDate creationTime;
+	private String description;
+	private byte[] image;
 	private String username;
-	
-	private String email;
+	private Long likes;
 
-	private String password;
-
-	private String firstName;
-
-	private String lastName;
-
-	private MultipartFile coverPic;
-
-	private MultipartFile profilePic;
-	private String city;
-	private String website;
 }

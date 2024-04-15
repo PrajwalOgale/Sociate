@@ -27,8 +27,8 @@ public class Relation {
 	private Long id;
 	//followers of user
 	@ManyToOne(cascade = CascadeType.ALL)
-	private User followerUserId;
+	private User followerUser;
 	//user is following	
 	@ManyToOne(cascade = CascadeType.ALL)
-	private User followingUserId;
+	private User followingUser;
 }

@@ -1,9 +1,8 @@
 package com.sociate.sociate.service;
 
-import org.springframework.web.multipart.MultipartFile;
-
 import com.sociate.sociate.dto.ForgotPasswordDTO;
 import com.sociate.sociate.dto.GetUserDTO;
+import com.sociate.sociate.dto.LoginUserDTO;
 import com.sociate.sociate.dto.RegisterUserDTO;
 import com.sociate.sociate.dto.UpdateUserDTO;
 import com.sociate.sociate.dto.UserEmailAvailabilityDto;
@@ -25,4 +24,5 @@ public interface UserService {
 
 	String updateUser(UpdateUserDTO user);
 
+	String authenticate(LoginUserDTO user);
 }

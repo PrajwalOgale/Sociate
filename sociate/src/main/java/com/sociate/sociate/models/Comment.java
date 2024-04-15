@@ -36,8 +36,8 @@ public class Comment {
 	//userid is id of user who commented
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(nullable = false)
-	private User userId;
+	private User user;
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(nullable = false)
-	private Post postId;
+	private Post post;
 }

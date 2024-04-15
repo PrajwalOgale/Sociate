@@ -31,9 +31,10 @@ public class Post {
 	@Column(length = 1000)
 	private String description;
 	private String image;
+	private Long likes;
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(nullable = false)
-	private User userId;
+	private User user;
 	private LocalDate creationTime;
 	
 }

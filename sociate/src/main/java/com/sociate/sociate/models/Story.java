@@ -28,6 +28,6 @@ public class Story {
 	private String image;
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(nullable = false)
-	private User userId;
+	private User user;
 
 }
