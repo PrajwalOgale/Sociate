@@ -10,4 +10,8 @@ public interface PostService {
 	String addPost(AddPostDto post, String username);
 	
 	List<GetPostsDto> getAllPostByUserOrFollowingUsers(Long userId);
+
+	String deletePostByUser(Long postId, Long userId);
+
+	Long likePostById(Long postId, Long id);
 }

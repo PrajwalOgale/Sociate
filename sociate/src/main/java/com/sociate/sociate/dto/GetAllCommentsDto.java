@@ -2,10 +2,6 @@ package com.sociate.sociate.dto;
 
 import java.time.LocalDate;
 
-import org.springframework.web.multipart.MultipartFile;
-
-import com.sociate.sociate.models.User;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,13 +13,16 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetPostsDto {
+public class GetAllCommentsDto {
 
-	private Long postId;
+	private Long id;
+
+	private String desciption;
+
 	private LocalDate creationTime;
-	private String description;
-	private byte[] image;
-	private String username;
 	private Long likes;
+
+	private Long userId;
+	private Long postId;
 
 }

@@ -75,6 +75,7 @@ public class PostServiceImpl implements PostService {
 					String postPicPath = p.getImage();
 					File postPic = new File(postPicPath);
 
+					post.setPostId(p.getId());
 					post.setCreationTime(p.getCreationTime());
 					post.setDescription(p.getDescription());
 					post.setLikes(p.getLikes());
@@ -89,6 +90,23 @@ public class PostServiceImpl implements PostService {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+		return null;
+	}
+
+	@Override
+	public String deletePostByUser(Long postId,Long userId) {
+		Post post = postRepo.findById(postId).orElseThrow(()-> new RuntimeException("Invalid post id."));
+		if(post.getUser().getId()!=userId) {
+			return "Post can not be deleted.";
+		}
+		post.setUser(null);
+		postRepo.delete(post);
+		return "post deleted successfully.";
+	}
+
+	@Override
+	public Long likePostById(Long postId, Long id) {
+		
 		return null;
 	}
 
